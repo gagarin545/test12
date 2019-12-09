@@ -2,17 +2,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head><title>Parcel for ${parcel.namedivision}</title></head>
+  <head><title>Parcel for ${parcel.namedivisi}</title></head>
   <body>
   <h1>Parcel for ${parcel.namedivision}}</h1>
 
   <%--@elvariable id="parcel" type=""--%>
   <form:form modelAttribute="parcel">
-  <form:hidden path="iddivision"/>
+  <form:hidden path="Покупатель"/>
   <table>
     <tr>
           <td>Имя :</td>
-          <td><form:input path="namedivision"/></td>
+          <td><form:input path="name"/></td>
     </tr>
     <tr>
           <td>Imei :</td>

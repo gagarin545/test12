@@ -22,6 +22,6 @@ public class PayController {
 
         List<PayEntity> payEntity = payService.payList();
         payEntity.forEach(x->System.out.println(x.getPersonEntity().getName()));
-        return new ModelAndView("paylist", "parcels", payEntity);
+        return new ModelAndView("PayList", "parcels", payEntity);
     }
 }

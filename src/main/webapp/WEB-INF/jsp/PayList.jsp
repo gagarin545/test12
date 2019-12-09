@@ -6,7 +6,7 @@
   <h1>Cписок Покупок</h1>
   <ul>
     <c:forEach items="${parcels}" var="parcel">
-      <li><a href="/pay/${parcel.id}"> <b>${parcel.name}</b>,  ;<b>${parcel.count}</b>, ;<b>${parcel.purchase_date}</b> </a>
+      <li><a href="/pay/${parcel.id}">  <b>${parcel.productEntiry.getName()}</b> - <b>${parcel.count}</b>, <b>${parcel.purchase_date}</b> </a>
     </c:forEach>
   </ul>
   </body>
