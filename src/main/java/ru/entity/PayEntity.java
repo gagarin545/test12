@@ -1,5 +1,8 @@
 package ru.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -10,8 +13,12 @@ public class PayEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id" , nullable = false, columnDefinition = "serial")
     private long id;
+    @Getter
+    @Setter
     @Column(name = "count")
     private  Integer count;
+    @Getter
+    @Setter
     @Column( name = "purchase_date", nullable = false )
     private Timestamp purchase_date;
     @ManyToOne(fetch = FetchType.EAGER)
@@ -24,10 +31,6 @@ public class PayEntity {
     public PayEntity() {}
 
     public long getId() {        return id;    }
-    public Integer getCount() {        return count;    }
-    public void setCount(Integer count) {        this.count = count;    }
-    public Timestamp getPurchase_date() {        return purchase_date;    }
-    public void setPurchase_date(Timestamp purchase_date) {        this.purchase_date = purchase_date;    }
     public ProductEntiry getProductEntiry() {        return productEntiry;    }
     public void setProductEntiry(ProductEntiry productEntiry) {        this.productEntiry = productEntiry;    }
     public PersonEntity getPersonEntity() {        return personEntity;    }
